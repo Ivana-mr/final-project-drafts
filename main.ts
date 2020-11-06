@@ -15,8 +15,21 @@ input.onPinPressed(TouchPin.P1, function () {
         basic.showNumber(food)
     }
     basic.clearScreen()
+    basic.showString("Micro- pet is feeded")
+    basic.showIcon(IconNames.Happy)
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    basic.clearScreen()
+    basic.showString("you scored 1 point ")
+    total_points += 1
 })
+let total_points = 0
 let amount_of_food = 0
+let counter = 3
+while (counter >= 0) {
+    basic.showNumber(counter)
+    counter += -1
+}
+basic.clearScreen()
 basic.showString("loading ")
 let y = 4
 for (let x = 0; x <= 4; x++) {
